@@ -16,11 +16,11 @@
 			.tab-scroll-item{
 				flex-shrink: 0;
 				padding: 0 20rpx;
-				color: #333333;
+				color: #999;
 				font-size: 26rpx;
 				font-weight:bold;
 				&.active{
-					color: red;
+					color: #252526;
 				}
 			}
 		}

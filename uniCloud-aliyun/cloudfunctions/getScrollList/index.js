@@ -5,6 +5,6 @@ exports.main = async (event, context) => {
 	const res = await collection.get()
 	return {
 		code:0,
-		labelList:res.data
+		data:res.data
 	}
 };

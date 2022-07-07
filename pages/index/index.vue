@@ -9,6 +9,7 @@
 	export default {
 		onLoad() {
 			this._initLabelList();
+			
 		},
 		data() {
 			return {
@@ -16,13 +17,9 @@
 			}
 		},
 		methods: {
-			_initLabelList() {
-				uniCloud.callFunction({
-					name: "getScrollList",
-				}).then((res) => {
-					console.log(res.result);
-					this.LabelList = res.result.labelList
-				})
+		async _initLabelList() {
+				const res = await this.$http.getLabeList()
+				this.LabelList=res
 			}
 		}
 	}
