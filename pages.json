@@ -41,20 +41,21 @@
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "white",
-		"navigationBarTitleText": "渡一教育",
-		"navigationBarBackgroundColor": "#f25037",
+		"navigationBarTitleText": "bearH5",
+		"navigationBarBackgroundColor": "#252526",
 		"backgroundColor": "#F8F8F8"
+		// 999999
 	},
 	"tabBar": {
-		"color": "#666",
-		"selectedColor": "#f25037",
-		"backgroundColor": "#fff",
-		"list": [ // 显示页面信息,包含了tabbar需要跳转的所有的页面信息
+		"color": "#999",
+		"selectedColor": "#FFF",
+		"backgroundColor": "#252526",
+		"list": [ 
 			{
-				"pagePath": "pages/index/index", // 页面路径
-				"iconPath": "static/img/home.png", // 默认图片
-				"selectedIconPath": "static/img/home-active.png", // 选中图片
-				"text": "首页" // 文字描述信息
+				"pagePath": "pages/index/index", 
+				"iconPath": "static/img/home.png", 
+				"selectedIconPath": "static/img/home-active.png", 
+				"text": "首页" 
 			},
 			{
 				"pagePath": "pages/follow/follow",

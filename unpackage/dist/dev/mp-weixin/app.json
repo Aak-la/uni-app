@@ -9,14 +9,14 @@
   "subPackages": [],
   "window": {
     "navigationBarTextStyle": "white",
-    "navigationBarTitleText": "渡一教育",
-    "navigationBarBackgroundColor": "#f25037",
+    "navigationBarTitleText": "bearH5",
+    "navigationBarBackgroundColor": "#252526",
     "backgroundColor": "#F8F8F8"
   },
   "tabBar": {
-    "color": "#666",
-    "selectedColor": "#f25037",
-    "backgroundColor": "#fff",
+    "color": "#999",
+    "selectedColor": "#FFF",
+    "backgroundColor": "#252526",
     "list": [
       {
         "pagePath": "pages/index/index",
