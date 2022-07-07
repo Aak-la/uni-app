@@ -11,9 +11,6 @@
 			</view>
 		</view>
 		<view :style="{height:statusHeight + 80 +'rpx'}"></view>
-		<view class="" v-for="item in 100" :key="item">
-			{{item}}
-		</view>
 	</view>
 </template>
 

@@ -1,0 +1,7 @@
+{
+  "name": "getScrollList",
+  "dependencies": {},
+  "extensions": {
+    "uni-cloud-jql": {}
+  }
+}
