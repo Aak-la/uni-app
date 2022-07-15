@@ -1,0 +1,7 @@
+{
+  "name": "getArtcileList",
+  "dependencies": {},
+  "extensions": {
+    "uni-cloud-jql": {}
+  }
+}

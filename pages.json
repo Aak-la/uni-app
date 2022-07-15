@@ -37,6 +37,15 @@
                 "enablePullDownRefresh": false
             }
             
+        },
+		{
+            "path" : "pages/userInfo/userInfo",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "用户登录",
+                "enablePullDownRefresh": false
+            }
+            
         }
     ],
 	"globalStyle": {

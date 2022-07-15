@@ -1,9 +1,10 @@
 <template>
 	<view class="tab">
-		<scroll-view scroll-x="true" class="tab-scroll">
+		<scroll-view scroll-x="true" class="tab-scroll" 
+		:scroll-into-view="currenIdex" scroll-with-animation="true">
 			<view class="tab-scroll-box">
-				<view :class="{active:isActionIndex===index}" class="tab-scroll-item " v-for="(item,index) in LabelList"
-					:key="item._id" @click="setActiveIndex(index)">
+				<view :class="{active:activeIndex===index}" class="tab-scroll-item"  v-for="(item,index) in labelList"
+					:key="item._id" @click="isActiveIndex(index)" :id="`item${index}`">
 					{{item.name}}
 				</view>
 			</view>
@@ -18,19 +19,26 @@
 	export default {
 		name: "Tabbar",
 		props: {
-			LabelList: {
+			labelList: {
 				type: Array,
+			},
+			activeIndex:{
+				type:Number
+			}
+		},
+		watch:{
+			activeIndex(index){
+				this.currenIdex=`item${index}` 
 			}
 		},
 		data() {
 			return {
-				isActionIndex: 0,
+				currenIdex:'item0'
 			};
 		},
 		methods: {
-			setActiveIndex(index) {
-				this.isActionIndex = index
-
+			isActiveIndex(index) {
+				this.$emit("changeActiveIndex",index)
 			}
 		}
 	}

@@ -1,6 +1,7 @@
 import App from './App'
 import module from './ajax/api/index.js'
 Vue.prototype.$http = module;
+
 // #ifndef VUE3
 import Vue from 'vue'
 Vue.config.productionTip = false
