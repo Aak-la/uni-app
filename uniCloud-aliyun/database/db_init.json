@@ -162,7 +162,7 @@
                 "author": {
                     "id": "4427201",
                     "author_name": "双越",
-                    "avatar": "//img2.sycdn.imooc.com/5a9fc8070001a82402060220-160-160.jpg",
+                    "avatar": "https://images.pexels.com/photos/7961265/pexels-photo-7961265.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
                     "status": "normal"
                 },
                 "classify": "前端开发",
@@ -390,6 +390,7 @@
                     "298045",
                     "286282"
                 ]
+				
             },
             {
                 "id": "5027812",

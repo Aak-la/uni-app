@@ -9,7 +9,7 @@
 				</view>
 			</view>
 		</scroll-view>
-		<view class="tab-icon">
+		<view class="tab-icon" @click="toLabelAdmin">
 			<uni-icons type="gear-filled" size="22" color="666"></uni-icons>
 		</view>
 	</view>
@@ -39,6 +39,12 @@
 		methods: {
 			isActiveIndex(index) {
 				this.$emit("changeActiveIndex",index)
+			},
+		async	toLabelAdmin(){
+				await this.checkedIsLogin()
+				uni.navigateTo({
+					url:'/pages/labelAdmin/labelAdmin'
+				})
 			}
 		}
 	}

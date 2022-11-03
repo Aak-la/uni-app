@@ -1,5 +1,6 @@
-const requireApi = require.context('.', true, /.js$/);
 
+
+const requireApi = require.context('.', true, /.js$/);
 let module = {};
 
 requireApi.keys().forEach((key, index) => {

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "save-likes": "/components/saveLikes/saveLikes"
+  },
+  "component": true
+}

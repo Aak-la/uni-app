@@ -46,10 +46,10 @@
 }
 
 /deep/ .uni-forms-item {
-	padding-left: 30rpx ;
+	padding-left: 30rpx !important;
 	border-bottom: 1px solid #eee;
 	padding-top: 24rpx;
-	background-color: #fff;
+	
 }
 
 /deep/ .uni-forms-item__inner {
@@ -57,7 +57,13 @@
 }
 
 /deep/ .label-text span {
-	font-size: 32rpx;
+	display: none;
+}
+/deep/ .is-required > span{
+	opacity: 0;
+}
+/deep/.uni-forms-item__label{
+	font-weight: bold;
 }
 
 
@@ -74,4 +80,14 @@
 	font-size: 32rpx;
 	@include flex(center);
 	margin-top: 80rpx;
+}
+.vCode-btn{
+	width: 160rpx;
+	padding: 15rpx 10rpx;
+	background-color: #252526;
+	text-align: center;
+	border-radius: 6%;
+	color: #FFFF;
+	box-sizing: border-box;
+	opacity: 0.9;
 }

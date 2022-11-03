@@ -25,7 +25,6 @@ exports.main = async (event, context) => {
 		.limit(pageSize)
 		.end()
 	const {total} = await db.collection('article').where(matchObj).count()
-	console.log(total);
 	return {
 		code: 0,
 		msg: "数据请求成功",

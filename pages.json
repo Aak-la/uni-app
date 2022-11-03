@@ -24,8 +24,7 @@
             "path" : "pages/search/search",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
+                "navigationStyle":"custom"
             }
             
         }
@@ -33,13 +32,13 @@
             "path" : "pages/labelAdmin/labelAdmin", 
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "",
+                "navigationBarTitleText": "标签",
                 "enablePullDownRefresh": false
             }
             
         },
 		{
-            "path" : "pages/userInfo/userInfo",
+            "path" : "pages/userInfo/login/login",
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "用户登录",

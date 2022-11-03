@@ -2,20 +2,24 @@
 	<swiper class="swiper-container" :current="activeIndex" @change="changeCurrentIndex">
 		<swiper-item v-for="(item,index) in labelList" :key="index">
 			<view class="swiper-item">
-				<Listitem :loadData="loadDate[index]" :articleList="articleData[index]" @loadMore="loadMoreData"></Listitem>
+				<Listitem :loadData="loadDate[index]" :articleList="articleData[index]" @loadMore="loadMoreData">
+				</Listitem>
 			</view>
 		</swiper-item>
 	</swiper>
 </template>
 
 <script>
+	import {
+		mapState
+	} from "vuex"
 	export default {
 		props: {
 			labelList: Array,
 			activeIndex: Number
 		},
 		created() {
-
+			this.labelList.length && this._getArticleList(this.activeIndex)
 		},
 		data() {
 			return {
@@ -26,7 +30,9 @@
 		},
 		watch: {
 			labelList(newVal, OldVal) {
-				this._getArticleList(this.activeIndex)
+				this.articleData = {},
+					this.loadDate = {},
+					this._getArticleList(this.activeIndex)
 			},
 		},
 		methods: {
@@ -60,21 +66,24 @@
 				oldList.push(...articleList)
 				this.$set(this.articleData, currentIndex, oldList)
 				this.loadDate[currentIndex].total = total
-				console.log(this.articleData);
 			},
 			loadMoreData() {
 				if (this.loadDate[this.activeIndex].total === this.articleData[this.activeIndex].length) {
-						this.loadDate[this.activeIndex]={
-							...this.loadDate[this.activeIndex],
-							...{loading:"noMore"}
+					this.loadDate[this.activeIndex] = {
+						...this.loadDate[this.activeIndex],
+						...{
+							loading: "noMore"
 						}
-						this.$forceUpdate()
-						return 
 					}
-					this.loadDate[this.activeIndex].page++; this._getArticleList(this.activeIndex)
+					this.$forceUpdate()
+					return
 				}
+				this.loadDate[this.activeIndex].page++;
+				this._getArticleList(this.activeIndex)
 			}
-		}
+		},
+
+	}
 </script>
 
 <style lang="scss">

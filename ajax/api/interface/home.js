@@ -10,3 +10,19 @@ export const getArtciList = data => ajax({
 	data
 })
 
+
+export const update_save_like = data => ajax({
+	name:"update_save_like",
+	data
+})
+export const get_search_data = data => ajax({
+  name:'get_search_data',
+  data
+})
+
+
+
+export const update_labelList = data => ajax({
+  name:'update_labelList',
+  data
+})

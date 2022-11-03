@@ -1,10 +1,11 @@
 export default ({name,data={}})=> {
+	/* 导出promise对象 */
 	return new Promise((resolve,reject) => {
 		uni.showLoading({
 		})
 		uniCloud.callFunction({
 			name,
-			data,
+      data,
 			success({result}) {
 				if(result.code === 0) {
 					resolve(result.data)
