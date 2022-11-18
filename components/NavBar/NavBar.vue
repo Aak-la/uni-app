@@ -10,9 +10,9 @@
 				:style="{marginRight:marginRight+'rpx',marginLeft:isSearch?'20rpx':''}">
 				<uni-icons type="search" color="#999"></uni-icons>
 				<view class="nav-bar-search-text" v-if="!isSearch">
-					搜索关键字
+					搜索
 				</view>
-				<input v-else type="text" class="search-input" placeholder="搜索关键字" confirm-type="search"
+				<input v-else type="text" class="search-input" placeholder="搜索" confirm-type="search"
 					v-model.trim="searchVal" @confirm="changeInput">
 			</view>
 		</view>

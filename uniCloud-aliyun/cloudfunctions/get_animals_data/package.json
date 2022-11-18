@@ -1,0 +1,7 @@
+{
+  "name": "get_animals_data",
+  "dependencies": {},
+  "extensions": {
+    "uni-cloud-jql": {}
+  }
+}

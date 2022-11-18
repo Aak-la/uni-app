@@ -23,7 +23,14 @@ export default {
 	setLabelList(state, labelList) {
 		uni.setStorageSync("labelList", labelList)
 		state.labelList = labelList
+	},
+	SaveItems(state, item) {
+		uni.setStorageSync("goodsItem", item);	
+		state.goodsItem =item
+	},
+	cleanItems(state){
+		uni.removeStorageSync('goodsItem')
+		state.goodsItem = []
 	}
-
 
 }

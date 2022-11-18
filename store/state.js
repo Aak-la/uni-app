@@ -1,5 +1,7 @@
 export default {
 	userInfo: uni.getStorageSync("userInfo") || null,
 	historyList: uni.getStorageSync('historyList') || [],
-	labelList:uni.getStorageSync('labelList')||[]
+	labelList:uni.getStorageSync('labelList')||[],
+	goodsItem:uni.getStorageSync('goodsItem')||[],
+	
 }

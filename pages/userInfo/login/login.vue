@@ -51,8 +51,8 @@
 			return {
 				type: 'account',
 				formData: {
-					loginName: '123',
-					password: '123',
+					loginName: 'alan9558',
+					password: '123qwe',
 					phone: '',
 					vCode: '',
 				}

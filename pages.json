@@ -46,10 +46,37 @@
             }
             
         }
+        ,{
+            "path" : "pages/buy/buy",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "购买",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/buycart/buycart",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "结算",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/Detail/Detail",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "详情",
+                "enablePullDownRefresh": false
+            }
+            
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "white",
-		"navigationBarTitleText": "bearH5",
+		"navigationBarTitleText": "动物社区",
 		"navigationBarBackgroundColor": "#252526",
 		"backgroundColor": "#F8F8F8"
 		// 999999
@@ -70,6 +97,12 @@
 				"iconPath": "static/img/follow.png",
 				"selectedIconPath": "static/img/follow-active.png",
 				"text": "关注"
+			},
+			{
+				"pagePath": "pages/buy/buy",
+				"iconPath": "static/img/buy.png",
+				"selectedIconPath": "static/img/buy-active.png",
+				"text": "购买"
 			},
 			{
 				"pagePath": "pages/self/self",

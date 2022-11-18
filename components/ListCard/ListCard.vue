@@ -1,14 +1,12 @@
 <template>
 	<view>
-		
 		<view class="list-card" v-if="item.mode==='base'" @click="goArticleDetail">
 			<view class="list-card-img">
-				<image :src="item.cover[0] ?item.cover[0] : '/static/img/logo.jpeg'"></image>
+				<image :src="item.cover[0]"></image>
 			</view>
 			<view class="list-card-content">
 				<view class="list-card-content-title">
 					<text>{{item.title}}</text>
-					<saveLikes :item="item"></saveLikes>
 				</view>
 				<view class="list-card-content-desc">
 					<view class="article-type">
@@ -20,17 +18,14 @@
 				</view>
 			</view>
 		</view>
-		
+
 		<view class="list-card mode-column" v-if="item.mode==='column'" @click="goArticleDetail">
 			<view class="list-card-top">
 				<text>{{item.title}}</text>
-				<saveLikes :item="item"></saveLikes>
 			</view>
 			<view class="list-card-middle">
 				<view class="image-container" v-for="(img,index) in item.cover.slice(0,3)" :key="index">
-					<image
-						:src="img"
-						mode="aspectFill"></image>
+					<image :src="img" mode="aspectFill"></image>
 				</view>
 			</view>
 			<view class="list-card-content-desc list-card-bottom">
@@ -43,7 +38,7 @@
 			</view>
 
 		</view>
-		
+
 		<view class="list-card mode-image" v-if="item.mode==='image'" @click="goArticleDetail">
 			<view class="list-card-top">
 				<view class="image-container">
@@ -52,7 +47,6 @@
 			</view>
 			<view class="list-card-middle">
 				<text>{{item.title}}</text>
-				<saveLikes :item="item"></saveLikes>
 			</view>
 			<view class="list-card-content-desc list-card-bottom">
 				<view class="article-type">
@@ -77,9 +71,29 @@
 
 			};
 		},
-		methods:{
-			goArticleDetail(){
-			this.$emit("saveSearchHistory")
+		methods: {
+			goArticleDetail() {
+				const {
+					_id,
+					title,
+					author,
+					create_time,
+					thunbs_up_count,
+					browse_count
+				} = this.item
+				const params = {
+					_id,
+					title,
+					author,
+					create_time,
+					thunbs_up_count,
+					browse_count
+				};
+				uni.navigateTo({
+					url: `../../pages/Detail/Detail?params=${JSON.stringify(params)}`
+				})
+				this.$emit("saveSearchHistory")
+
 			}
 		}
 	}

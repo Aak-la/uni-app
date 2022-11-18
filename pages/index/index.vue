@@ -36,12 +36,10 @@
 			...mapMutations(["setLabelList"])
 		},
 		computed: {
-			//...mapState(["labelList"])
 			labelList() {
 				if (this.userInfo) {
 					this.ActionIndex = 0
-					return [...this.$store.state.labelList.slice(0, 1), ...this.$store.state.labelList.filter(item =>this
-						.userInfo.label_ids.includes(item._id))]
+					 return [...this.$store.state.labelList.slice(0,1),...this.$store.state.labelList.filter(item => this.userInfo.label_ids.includes(item._id))]
 				} else {
 					return this.$store.state.labelList
 				}

@@ -1,0 +1,71 @@
+.buy-container{
+	overflow: hidden;
+	.goods-box{
+		@include flex()
+		width: 100%;
+		overflow: hidden;
+		border-bottom: 1px solid #9999;
+		padding: 30rpx;
+		box-sizing: border-box;
+		.goods-img{
+			width: 200rpx;
+			height:200rpx;
+			border-radius: 10px;
+			overflow: hidden;
+			image{
+				width: 100%;
+				height: 100%;
+			}
+		}
+		.goods-description{
+			width: 450rpx;
+			@include flex(space-between,row,wrap)
+			.goods-title{
+				width: 100%;
+				font-size:16px;
+				font-weight: bold;
+				color: #333;
+				margin-bottom: 10px;
+				
+			}
+			.goods-rice-warp{
+				color: #999;
+				font-weight: bold;
+				width: 100%;
+				font-size:13px;
+				margin-bottom: 10px;
+				@include flex()
+				.goods-rice-description{
+					font-size:14px;
+					font-weight: bold;
+				}
+			}	
+			.goods-nuberandlocation{
+				@include flex()
+				justify-content: space-between;
+				width: 100%;
+				.goods-number{
+					font-size:13px;
+					color: #999;
+					font-weight: bold;
+				
+				}
+				.goods-location{
+					font-size:13px;
+					color: #999;
+					
+				}
+			}
+			
+		}
+		
+	}
+	.shoppingCart{
+		position: fixed;
+		bottom:60px;
+		right: 20px;
+		width: 90rpx;
+		height: 90rpx;
+		background-color:#FFFFFF;
+	}
+}

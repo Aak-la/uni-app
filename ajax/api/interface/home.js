@@ -26,3 +26,10 @@ export const update_labelList = data => ajax({
   name:'update_labelList',
   data
 })
+
+
+
+export const get_animals_data = data => ajax({
+  name:'get_animals_data',
+  data
+})
